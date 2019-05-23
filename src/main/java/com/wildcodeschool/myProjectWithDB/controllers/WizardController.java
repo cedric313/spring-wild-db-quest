@@ -63,4 +63,10 @@ public class WizardController {
         );
         return WizardRepository.selectById(id);
     }
+
+    @DeleteMapping("/api/wizards/{id}")
+    public void delete(@PathVariable int id) {
+        WizardRepository.delete(id);
+
+    }
 }
